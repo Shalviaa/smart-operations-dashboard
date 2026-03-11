@@ -1,16 +1,79 @@
-# React + Vite
+# Smart Operations Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React dashboard for monitoring Field Operations (FO) performance across different regions. Built with Vite, React, Tailwind CSS, and Recharts.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Regional Filtering**: Filter performance data by region (All, Jabodetabek, Jawa Barat)
+- **Performance Metrics**: Real-time SLA achievement and ticket statistics
+- **Interactive Charts**: Visual representations using Recharts library
+- **Responsive Design**: Mobile-friendly interface with Tailwind CSS
+- **Export Functionality**: Download performance data as CSV
 
-## React Compiler
+## 📊 Dashboard Components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Header Section**: Title and regional filter controls
+- **Statistics Cards**: Total tickets and average SLA percentage
+- **Visualization Charts**: Bar charts for SLA and line charts for efficiency
+- **Data Table**: Detailed performance metrics with ranking
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 18 with Vite
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+
+## 📦 Installation
+
+```bash
+npm install
+```
+
+## 🚀 Development
+
+```bash
+npm run dev
+```
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+## 🌐 Deployment
+
+This project is configured for easy deployment to Netlify, Vercel, or any static hosting service.
+
+### Netlify Deployment
+
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy automatically on push to main branch
+
+## 📁 Project Structure
+
+```
+src/
+├── App.jsx          # Main dashboard component
+├── index.css        # Tailwind CSS directives
+├── main.jsx         # React entry point
+└── assets/          # Static assets
+```
+
+## 🎯 Data Format
+
+The dashboard processes performance data with the following structure:
+- Regional information
+- PIC (Person in Charge) names
+- SLA achievement percentages
+- Ticket volumes and efficiency metrics
+
+## 🔧 Configuration
+
+- **Tailwind Config**: `tailwind.config.js`
+- **PostCSS Config**: `postcss.config.js`
+- **Vite Config**: `vite.config.js`
